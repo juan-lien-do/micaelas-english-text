@@ -1,42 +1,41 @@
 import { useState } from "react";
-import questions from "../constants/Questions";
-import QuestionCard from "../components/QuestionCard";
-import TestEnd from "../components/TestEnd";
+import tests from "../constants/Tests";
+import EnglishTest from "../components/EnglishTest";
+import TestSelector from "../components/TestSelector";
+import Breadcrumb from "../components/Breadcrumb";
 
-function QuestionsPage(){
-    const [idPregunta, setIdPregunta] = useState(0)
-    const [finalDelTest, setFinalDelTest] = useState(false)
-    const [respuestasCorrectas, setRespuestasCorrectas] = useState(false)
-    const [respuestasIncorrectas, setRespuestasIncorrectas] = useState(false)
+function QuestionsPage() {
+  const [hasSelectedATest, setHasSelectedATest] = useState(false);
+  const [chosenTest, setChosenTest] = useState([]);
 
-    function agregarRespuestaCorrecta(){
+  const paths = [
+    { name: "Home", link: "/" },
+    { name: "Tests", link: "/test" },
+    { name: hasSelectedATest ? chosenTest.name : "Select a Test", link: "#" },
+  ];
 
-        setRespuestasCorrectas(respuestasCorrectas + 1)
-        if (idPregunta + 1 == questions.length){
-            setFinalDelTest(true)
-        }
-        setIdPregunta(idPregunta + 1)
-    }
+  function handleSelection(testId) {
+    console.log(testId)
+    setHasSelectedATest(true);
+    setChosenTest(tests[testId-1]);
+  }
+  function handleLeaveTest() {
+    setHasSelectedATest(false);
+    setChosenTest([]);
+  }
 
-    function agregarRespuestaIncorrecta(){
-        setRespuestasIncorrectas(respuestasIncorrectas + 1)
-        if (idPregunta + 1 == questions.length){
-            setFinalDelTest(true)
-        }
-        setIdPregunta(idPregunta + 1)
-    }
+  return (
+    <>
+          <Breadcrumb paths={paths} />
 
-
-    return (
-        <>
-        {
-            finalDelTest ? 
-            <TestEnd respuestasCorrectas={respuestasCorrectas} respuestasIncorrectas={respuestasIncorrectas}/>
-            :
-            <QuestionCard agregarRespuestaCorrecta={agregarRespuestaCorrecta} agregarRespuestaIncorrecta={agregarRespuestaIncorrecta} pregunta={questions[idPregunta]}/>
-        }
-        </>
-    )
+      {hasSelectedATest ? (
+        <EnglishTest test={chosenTest} handleLeaveTest={handleLeaveTest} />
+      ) : (
+        <TestSelector tests={tests} handleSelection={handleSelection} />
+      )}
+    </>
+  );
+  
 }
 
 export default QuestionsPage;
