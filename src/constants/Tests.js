@@ -12,19 +12,19 @@ const tests = [
         ],
       },
       {
-        question: "Which country is home to the kangaroo?",
+        question: "question",
         answers: [
-          { value: "South Africa", isTrue: false },
-          { value: "Australia", isTrue: true },
-          { value: "Brazil", isTrue: false },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
       {
-        question: "Who painted the Mona Lisa?",
+        question: "question",
         answers: [
-          { value: "Vincent van Gogh", isTrue: false },
-          { value: "Pablo Picasso", isTrue: false },
-          { value: "Leonardo da Vinci", isTrue: true },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
     ],
@@ -34,27 +34,27 @@ const tests = [
     id:2,
     questions: [
       {
-        question: "What is the chemical symbol for water?",
+        question: "question",
         answers: [
-          { value: "O2", isTrue: false },
-          { value: "CO2", isTrue: false },
-          { value: "H2O", isTrue: true },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
       {
-        question: "Which planet is closest to the sun?",
+        question: "question",
         answers: [
-          { value: "Venus", isTrue: false },
-          { value: "Mercury", isTrue: true },
-          { value: "Mars", isTrue: false },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
       {
-        question: "How many bones are in the human body?",
+        question: "question",
         answers: [
-          { value: "206", isTrue: true },
-          { value: "300", isTrue: false },
-          { value: "180", isTrue: false },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
     ],
@@ -64,27 +64,27 @@ const tests = [
     id:3,
     questions: [
       {
-        question: "Who was the first President of the United States?",
+        question: "question",
         answers: [
-          { value: "Thomas Jefferson", isTrue: false },
-          { value: "George Washington", isTrue: true },
-          { value: "Abraham Lincoln", isTrue: false },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
       {
-        question: "In which year did the Titanic sink?",
+        question: "question",
         answers: [
-          { value: "1912", isTrue: true },
-          { value: "1905", isTrue: false },
-          { value: "1898", isTrue: false },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
       {
-        question: "What ancient civilization built the pyramids?",
+        question: "question",
         answers: [
-          { value: "Romans", isTrue: false },
-          { value: "Egyptians", isTrue: true },
-          { value: "Aztecs", isTrue: false },
+          { value: "false", isTrue: false },
+          { value: "true", isTrue: true },
+          { value: "false", isTrue: false },
         ],
       },
     ],

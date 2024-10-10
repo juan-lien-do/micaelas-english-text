@@ -9,7 +9,7 @@ function SuccessModal({ show, setRightAnswer, agregarRespuestaCorrecta }) {
 
   return (
     <>
-      <Modal className="bg-success" show={show} onHide={handleClose}>
+      <Modal className="bg-success" show={show} onHide={handleClose} centered={true}>
         <Modal.Header closeButton>
           <Modal.Title>Correct Answer!</Modal.Title>
         </Modal.Header>
