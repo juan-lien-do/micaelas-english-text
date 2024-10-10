@@ -20,7 +20,7 @@ function Home(){
             <h1 className="fs-1">Micaela's English Test</h1>
             <h3 className="fst-italic my-5 ">Don't wait. <span className="text-primary">{typeEffect}</span> </h3>
 
-            <NavLink className="btn btn-lg btn-primary" to="/test">Take the test</NavLink>
+            <NavLink className="btn btn-lg btn-primary" to="/test">Let's go</NavLink>
         </div>
         </>
     )

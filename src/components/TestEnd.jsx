@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function TestEnd({ respuestasCorrectas, respuestasIncorrectas }) {
+function TestEnd({ respuestasCorrectas, respuestasIncorrectas, handleLeaveTest }) {
   const finalGrade = Math.round(
     (respuestasCorrectas / (respuestasCorrectas + respuestasIncorrectas)) * 100
   );
@@ -13,13 +13,13 @@ function TestEnd({ respuestasCorrectas, respuestasIncorrectas }) {
               <ul className="fs-5 text-start">
                 <li>
                   <span className="text-success fw-bold">
-                    {respuestasCorrectas}
+                    {respuestasCorrectas ? respuestasCorrectas : "No" }
                   </span>{" "}
                   right answers
                 </li>
                 <li>
                   <span className="text-danger fw-bold">
-                    {respuestasIncorrectas}
+                    {respuestasIncorrectas ? respuestasIncorrectas : "No" }
                   </span>{" "}
                   wrong answers
                 </li>
@@ -46,9 +46,11 @@ function TestEnd({ respuestasCorrectas, respuestasIncorrectas }) {
               </div>
           </span>
 
-        <NavLink className="btn btn-primary my-5" to="/home">
-          Return
+        <NavLink className="btn btn-secondary mt-5" to="/home">
+          Return to Home
         </NavLink>
+        <br/>
+        <button className="btn btn-primary my-2" onClick={handleLeaveTest}>See more tests</button>
     </>
   );
 }
