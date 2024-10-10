@@ -6,7 +6,7 @@ function FailureModal({ wrongAnswer, setWrongAnswer, agregarRespuestaIncorrecta 
 
   return (
     <>
-      <Modal className='bg-danger' show={wrongAnswer} onHide={handleClose}>
+      <Modal className='bg-danger' show={wrongAnswer} onHide={handleClose} centered={true}>
         <Modal.Header closeButton>
           <Modal.Title>Wrong answer!</Modal.Title>
         </Modal.Header>
