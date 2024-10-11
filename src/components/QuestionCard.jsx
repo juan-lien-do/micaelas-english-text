@@ -41,7 +41,7 @@ function QuestionCard({
         agregarRespuestaCorrecta={agregarRespuestaCorrecta}
       />
 
-      <div className="card container" style={{userSelect:"none"}}>
+      <div className="card d-grid gap-2" style={{userSelect:"none"}}>
         <h3 className="mb-5">{pregunta?.question}</h3>
         <div className="d-grid gap-2">
             {pregunta?.answers?.map((x, index) => (
