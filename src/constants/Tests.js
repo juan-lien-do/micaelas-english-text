@@ -12,19 +12,18 @@ const tests = [
         ],
       },
       {
-        question: "question",
+        question: "In Winter, do you wear t-shirt?",
         answers: [
-          { value: "false", isTrue: false },
-          { value: "true", isTrue: true },
-          { value: "false", isTrue: false },
+          { value: "False", isTrue: true },
+          { value: "True", isTrue: false },
         ],
       },
       {
-        question: "question",
+        question: "What do you eat in Summer/Spring?",
         answers: [
-          { value: "false", isTrue: false },
-          { value: "true", isTrue: true },
-          { value: "false", isTrue: false },
+          { value: "Soup", isTrue: false },
+          { value: "Ice Cream", isTrue: true },
+          { value: "Salad", isTrue: false },
         ],
       },
     ],
