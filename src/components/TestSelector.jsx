@@ -10,7 +10,7 @@ function TestSelector({ tests, handleSelection }) {
             >
               <h5 className="card-title">{x.testName}</h5>
               <button
-                className="btn btn-primary"
+                className="btn btn-primary" disabled={!x.enabled}
                 onClick={() => {
                   handleSelection(x.id);
                 }}

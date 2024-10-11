@@ -2,6 +2,7 @@ const tests = [
   {
     testName: "Quiz #1",
     id:1,
+    enabled: true,
     questions: [
       {
         question: "What do you wear in summer?",
@@ -31,6 +32,7 @@ const tests = [
   {
     testName: "Quiz #2",
     id:2,
+    enabled: false,
     questions: [
       {
         question: "question",
@@ -61,6 +63,7 @@ const tests = [
   {
     testName: "Quiz #3",
     id:3,
+    enabled: false,
     questions: [
       {
         question: "question",

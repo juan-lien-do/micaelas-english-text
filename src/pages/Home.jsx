@@ -17,6 +17,7 @@ function Home(){
     return (
         <>
         <div className="my-auto">
+            <p className="fs-2">📚</p>
             <h1 className="fs-1">Micaela's English Test</h1>
             <h3 className="fst-italic my-5 ">Don't wait. <span className="text-primary">{typeEffect}</span> </h3>
 
